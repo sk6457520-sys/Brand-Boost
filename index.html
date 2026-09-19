@@ -1,420 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PromoHub</title>
 
-<!-- Social Media Icons -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
 <style>
-
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    color: white;
-
-    background:
-    linear-gradient(
-        135deg,
-        #0f172a,
-        #312e81,
-        #1e3a8a,
-        #0f766e
-    );
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #111827, #1e3a8a, #075985);
+  color: white;
 }
 
-.page {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding: 25px;
-}
-
-.box {
-    width: 100%;
-    max-width: 520px;
-    text-align: center;
+.container {
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  padding: 45px 20px 35px;
+  text-align: center;
 }
 
 h1 {
-    font-size: 32px;
-    line-height: 1.2;
-    margin-bottom: 45px;
+  font-size: 38px;
+  margin-bottom: 18px;
 }
 
-h2 {
-    font-size: 30px;
-    margin-bottom: 22px;
+.subtitle {
+  font-size: 21px;
+  line-height: 1.5;
+  margin-bottom: 35px;
 }
 
-.question {
-    font-size: 19px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+.brand-card {
+  width: 100%;
+  height: 105px;
+  background: white;
+  color: #111827;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  transition: transform 0.2s;
 }
 
-/* Main buttons */
-
-.main-button {
-    width: 100%;
-    border: none;
-    border-radius: 18px;
-
-    padding: 21px 20px;
-    margin: 12px 0;
-
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 10px 25px rgba(0,0,0,0.25);
-
-    transition: transform 0.2s;
+.brand-card:active {
+  transform: scale(0.97);
 }
 
-.main-button:active {
-    transform: scale(0.97);
+.logo-box {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.story-button {
-    background: linear-gradient(
-        135deg,
-        #2563eb,
-        #4f46e5
-    );
+.logo-box img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
-.logo-button {
-    background: linear-gradient(
-        135deg,
-        #059669,
-        #10b981
-    );
+.brand-name {
+  flex: 1;
+  text-align: left;
+  font-size: 25px;
+  font-weight: bold;
+  padding-left: 18px;
 }
-
-/* Platform buttons */
-
-.platform {
-    width: 100%;
-
-    display: flex;
-    align-items: center;
-
-    text-align: left;
-
-    background: rgba(255,255,255,0.97);
-    color: #111827;
-
-    border: none;
-    border-radius: 18px;
-
-    padding: 18px 22px;
-    margin: 15px 0;
-
-    font-size: 20px;
-    font-weight: bold;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 9px 22px rgba(0,0,0,0.25);
-
-    transition: transform 0.2s;
-}
-
-.platform:active {
-    transform: scale(0.97);
-}
-
-/* Social media icons */
-
-.platform-icon {
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin-right: 20px;
-
-    font-size: 30px;
-}
-
-/* Instagram */
-
-.instagram-icon {
-    color: #E1306C;
-}
-
-/* YouTube */
-
-.youtube-icon {
-    color: #FF0000;
-}
-
-/* Facebook */
-
-.facebook-icon {
-    color: #1877F2;
-}
-
-/* Back button */
 
 .back {
-    margin-top: 25px;
-
-    padding: 12px 28px;
-
-    background: rgba(255,255,255,0.08);
-
-    color: white;
-
-    border: 1px solid rgba(255,255,255,0.55);
-
-    border-radius: 12px;
-
-    font-size: 17px;
-
-    cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 35px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-radius: 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 19px;
 }
 
-.hidden {
-    display: none;
-}
+@media (max-width: 400px) {
+  h1 {
+    font-size: 32px;
+  }
 
+  .subtitle {
+    font-size: 19px;
+  }
+
+  .brand-card {
+    height: 95px;
+  }
+
+  .logo-box,
+  .logo-box img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .brand-name {
+    font-size: 22px;
+  }
+}
 </style>
 </head>
 
 <body>
 
+<div class="container">
 
-<!-- ========================= -->
-<!-- HOME PAGE -->
-<!-- ========================= -->
+  <h1>Story Promotion</h1>
 
-<div class="page" id="home">
+  <div class="subtitle">
+    Aap kis brand par story promotion<br>
+    karna chahte hain?
+  </div>
 
-    <div class="box">
-
-        <h1>
-            Welcome to Our<br>
-            Promotion Platform
-        </h1>
-
-        <div class="question">
-            Aap kya promote karna chahte hain?
-        </div>
-
-
-        <button
-            class="main-button story-button"
-            onclick="showPage('storyPage')">
-
-            Story Promotion
-
-        </button>
-
-
-        <button
-            class="main-button logo-button"
-            onclick="showPage('logoPage')">
-
-            Logo Promotion
-
-        </button>
-
+  <!-- 4Rabet -->
+  <div class="brand-card" onclick="selectBrand('4Rabet')">
+    <div class="logo-box">
+      <img src="4rabet_logo.jpeg" alt="4Rabet">
     </div>
+    <div class="brand-name">
+      4Rabet
+    </div>
+  </div>
+
+  <!-- Mostbet -->
+  <div class="brand-card" onclick="selectBrand('Mostbet')">
+    <div class="logo-box">
+      <img src="images (1).jpeg" alt="Mostbet">
+    </div>
+    <div class="brand-name">
+      Mostbet
+    </div>
+  </div>
+
+  <!-- Raja Bets -->
+  <div class="brand-card" onclick="selectBrand('Raja Bets')">
+    <div class="logo-box">
+      <img src="images (2).jpeg" alt="Raja Bets">
+    </div>
+    <div class="brand-name">
+      Raja Bets
+    </div>
+  </div>
+
+  <!-- Poker Club -->
+  <div class="brand-card" onclick="selectBrand('Poker Club')">
+    <div class="logo-box">
+      <img src="images.jpeg" alt="Poker Club">
+    </div>
+    <div class="brand-name">
+      Poker Club
+    </div>
+  </div>
+
+  <a href="index.html" class="back">← Back</a>
 
 </div>
-
-
-
-<!-- ========================= -->
-<!-- STORY PROMOTION PAGE -->
-<!-- ========================= -->
-
-<div class="page hidden" id="storyPage">
-
-    <div class="box">
-
-        <h2>
-            Story Promotion
-        </h2>
-
-        <div class="question">
-            Aap kis platform par story promotion
-            karna chahte hain?
-        </div>
-
-
-        <!-- Instagram -->
-
-        <button class="platform">
-
-            <span class="platform-icon instagram-icon">
-                <i class="fa-brands fa-instagram"></i>
-            </span>
-
-            Instagram
-
-        </button>
-
-
-        <!-- YouTube -->
-
-        <button class="platform">
-
-            <span class="platform-icon youtube-icon">
-                <i class="fa-brands fa-youtube"></i>
-            </span>
-
-            YouTube
-
-        </button>
-
-
-        <!-- Facebook -->
-
-        <button class="platform">
-
-            <span class="platform-icon facebook-icon">
-                <i class="fa-brands fa-facebook"></i>
-            </span>
-
-            Facebook
-
-        </button>
-
-
-        <button
-            class="back"
-            onclick="showPage('home')">
-
-            ← Back
-
-        </button>
-
-    </div>
-
-</div>
-
-
-
-<!-- ========================= -->
-<!-- LOGO PROMOTION PAGE -->
-<!-- ========================= -->
-
-<div class="page hidden" id="logoPage">
-
-    <div class="box">
-
-        <h2>
-            Logo Promotion
-        </h2>
-
-        <div class="question">
-            Aap kis platform par logo promotion
-            karna chahte hain?
-        </div>
-
-
-        <!-- Instagram -->
-
-        <button class="platform">
-
-            <span class="platform-icon instagram-icon">
-                <i class="fa-brands fa-instagram"></i>
-            </span>
-
-            Instagram
-
-        </button>
-
-
-        <!-- YouTube -->
-
-        <button class="platform">
-
-            <span class="platform-icon youtube-icon">
-                <i class="fa-brands fa-youtube"></i>
-            </span>
-
-            YouTube
-
-        </button>
-
-
-        <!-- Facebook -->
-
-        <button class="platform">
-
-            <span class="platform-icon facebook-icon">
-                <i class="fa-brands fa-facebook"></i>
-            </span>
-
-            Facebook
-
-        </button>
-
-
-        <button
-            class="back"
-            onclick="showPage('home')">
-
-            ← Back
-
-        </button>
-
-    </div>
-
-</div>
-
-
-
-<!-- ========================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================= -->
 
 <script>
-
-function showPage(pageId) {
-
-    document
-        .getElementById("home")
-        .classList.add("hidden");
-
-    document
-        .getElementById("storyPage")
-        .classList.add("hidden");
-
-    document
-        .getElementById("logoPage")
-        .classList.add("hidden");
-
-
-    document
-        .getElementById(pageId)
-        .classList.remove("hidden");
-
+function selectBrand(brand) {
+  alert("Aapne " + brand + " select kiya hai.");
 }
-
 </script>
 
 </body>
