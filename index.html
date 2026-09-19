@@ -243,20 +243,27 @@ body {
 
 <script>
 
-function storyPromotion() {
+function openPlatformPage() {
 
-    alert("Story Promotion selected");
+    document.getElementById("homePage").style.display = "none";
+
+    document.getElementById("platformPage").style.display = "flex";
+}
+
+function goHome() {
+
+    document.getElementById("platformPage").style.display = "none";
+
+    document.getElementById("homePage").style.display = "flex";
+}
+
+function selectPlatform(platform) {
+
+    alert(platform + " selected");
 
 }
 
-
-function logoPromotion() {
-
-    alert("Logo Promotion selected");
-
-}
-
-</script>
+    </script>
 
 </body>
 </html>
