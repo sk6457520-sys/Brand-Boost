@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>PromoHub</title>
 
+
+<!-- Font Awesome Icons -->
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
 <style>
+
+/* =========================
+   BASIC
+========================= */
 
 * {
     margin: 0;
@@ -15,7 +30,9 @@
 }
 
 body {
+
     min-height: 100vh;
+
     font-family: Arial, sans-serif;
 
     background:
@@ -27,58 +44,104 @@ body {
             #f97316
         );
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     color: white;
 }
 
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+
+    min-height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 20px;
+}
+
+.page.active {
+
+    display: flex;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
 .container {
+
     width: 100%;
-    max-width: 500px;
-    padding: 30px 20px;
+
+    max-width: 520px;
+
     text-align: center;
 }
 
-/* LOGO / TITLE */
+
+/* =========================
+   HOME TITLE
+========================= */
 
 .logo {
-    font-size: 38px;
+
+    font-size: 40px;
+
     font-weight: 800;
-    margin-bottom: 12px;
+
+    margin-bottom: 15px;
 
     text-shadow:
-        0 4px 15px rgba(0,0,0,0.25);
+        0 5px 15px rgba(0,0,0,0.25);
 }
 
+
 .welcome {
-    font-size: 22px;
-    font-weight: 600;
+
+    font-size: 23px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
     margin-bottom: 12px;
 }
 
+
 .subtitle {
-    font-size: 18px;
+
+    font-size: 19px;
+
     margin-bottom: 32px;
-    opacity: 0.95;
 }
 
-/* CARDS */
+
+/* =========================
+   HOME CARDS
+========================= */
 
 .option-card {
+
     width: 100%;
-    min-height: 105px;
+
+    min-height: 110px;
 
     border: none;
+
     border-radius: 22px;
 
     margin-bottom: 20px;
 
-    display: flex;
-    align-items: center;
-
     padding: 18px 22px;
+
+    display: flex;
+
+    align-items: center;
 
     color: white;
 
@@ -90,13 +153,17 @@ body {
     transition: 0.2s;
 }
 
+
 .option-card:active {
+
     transform: scale(0.96);
 }
 
-/* STORY */
+
+/* Story */
 
 .story {
+
     background:
         linear-gradient(
             135deg,
@@ -105,9 +172,11 @@ body {
         );
 }
 
-/* LOGO */
+
+/* Logo */
 
 .logo-card {
+
     background:
         linear-gradient(
             135deg,
@@ -116,18 +185,26 @@ body {
         );
 }
 
-/* ICON */
 
-.icon {
-    width: 65px;
-    height: 65px;
+/* =========================
+   HOME ICON
+========================= */
+
+.option-icon {
+
+    width: 68px;
+
+    height: 68px;
 
     border-radius: 18px;
 
-    background: rgba(255,255,255,0.20);
+    background:
+        rgba(255,255,255,0.20);
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-size: 32px;
@@ -135,127 +212,482 @@ body {
     flex-shrink: 0;
 }
 
-/* TEXT */
 
-.card-text {
+/* =========================
+   HOME TEXT
+========================= */
+
+.option-text {
+
     text-align: left;
+
     margin-left: 20px;
 }
 
-.card-title {
-    font-size: 23px;
+
+.option-title {
+
+    font-size: 24px;
+
     font-weight: 700;
-    margin-bottom: 5px;
+
+    margin-bottom: 6px;
 }
 
-.card-arrow {
-    font-size: 15px;
-    opacity: 0.85;
+
+.option-continue {
+
+    font-size: 16px;
+
+    opacity: 0.9;
 }
 
-/* FOOTER */
 
-.footer {
-    margin-top: 25px;
-    font-size: 13px;
-    opacity: 0.75;
+/* =========================
+   PLATFORM PAGE
+========================= */
+
+.platform-title {
+
+    font-size: 36px;
+
+    font-weight: 800;
+
+    margin-bottom: 12px;
+}
+
+
+.platform-subtitle {
+
+    font-size: 19px;
+
+    margin-bottom: 30px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================
+   PLATFORM CARDS
+========================= */
+
+.platform-card {
+
+    width: 100%;
+
+    height: 90px;
+
+    border: none;
+
+    border-radius: 20px;
+
+    margin-bottom: 18px;
+
+    padding: 12px 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    color: white;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.25);
+
+    transition: 0.2s;
+}
+
+
+.platform-card:active {
+
+    transform: scale(0.96);
+}
+
+
+/* Instagram */
+
+.instagram {
+
+    background:
+        linear-gradient(
+            135deg,
+            #833ab4,
+            #fd1d1d,
+            #fcb045
+        );
+}
+
+
+/* YouTube */
+
+.youtube {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff0000,
+            #b91c1c
+        );
+}
+
+
+/* Facebook */
+
+.facebook {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1877f2,
+            #1d4ed8
+        );
+}
+
+
+/* =========================
+   PLATFORM ICON
+========================= */
+
+.platform-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 17px;
+
+    background:
+        rgba(255,255,255,0.20);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 30px;
+
+    flex-shrink: 0;
+}
+
+
+.platform-name {
+
+    margin-left: 20px;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-button {
+
+    margin-top: 8px;
+
+    padding: 13px 32px;
+
+    border: 2px solid
+        rgba(255,255,255,0.8);
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.10);
+
+    color: white;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.back-button:active {
+
+    transform: scale(0.95);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .logo {
+        font-size: 34px;
+    }
+
+    .welcome {
+        font-size: 21px;
+    }
+
+    .option-title {
+        font-size: 21px;
+    }
+
+    .platform-title {
+        font-size: 32px;
+    }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<div class="container">
 
-    <div class="logo">
-        PromoHub
-    </div>
+<!-- ==================================================
+     HOME PAGE
+================================================== -->
 
-    <div class="welcome">
-        Welcome to Our Promotion Platform
-    </div>
+<div id="homePage" class="page active">
 
-    <div class="subtitle">
-        Aap kya promote karna chahte hain?
-    </div>
+    <div class="container">
 
 
-    <!-- STORY PROMOTION -->
-
-    <button
-        class="option-card story"
-        onclick="openPlatformPage()"
-    >
-
-        <div class="icon">
-            📖
+        <div class="logo">
+            PromoHub
         </div>
 
-        <div class="card-text">
 
-            <div class="card-title">
-                Story Promotion
-            </div>
-
-            <div class="card-arrow">
-                Continue →
-            </div>
-
+        <div class="welcome">
+            Welcome to Our Promotion Platform
         </div>
 
-    </button>
 
-
-    <!-- LOGO PROMOTION -->
-
-    <button
-        class="option-card logo-card"
-        onclick="openPlatformPage()"
-    >
-
-        <div class="icon">
-            🎨
+        <div class="subtitle">
+            Aap kya promote karna chahte hain?
         </div>
 
-        <div class="card-text">
 
-            <div class="card-title">
-                Logo Promotion
+        <!-- STORY PROMOTION -->
+
+        <button
+            class="option-card story"
+            onclick="showPlatformPage()"
+        >
+
+            <div class="option-icon">
+
+                <i class="fa-solid fa-book-open"></i>
+
             </div>
 
-            <div class="card-arrow">
-                Continue →
+
+            <div class="option-text">
+
+                <div class="option-title">
+                    Story Promotion
+                </div>
+
+                <div class="option-continue">
+                    Continue →
+                </div>
+
             </div>
 
-        </div>
-
-    </button>
+        </button>
 
 
-    <div class="footer">
-        © 2026 PromoHub
+        <!-- LOGO PROMOTION -->
+
+        <button
+            class="option-card logo-card"
+            onclick="showPlatformPage()"
+        >
+
+            <div class="option-icon">
+
+                <i class="fa-solid fa-palette"></i>
+
+            </div>
+
+
+            <div class="option-text">
+
+                <div class="option-title">
+                    Logo Promotion
+                </div>
+
+                <div class="option-continue">
+                    Continue →
+                </div>
+
+            </div>
+
+        </button>
+
+
     </div>
 
 </div>
 
 
+
+<!-- ==================================================
+     PLATFORM PAGE
+================================================== -->
+
+<div id="platformPage" class="page">
+
+    <div class="container">
+
+
+        <div class="platform-title">
+            Choose Platform
+        </div>
+
+
+        <div class="platform-subtitle">
+            Aap kis platform par promotion karna chahte hain?
+        </div>
+
+
+        <!-- INSTAGRAM -->
+
+        <button
+            class="platform-card instagram"
+            onclick="selectPlatform('Instagram')"
+        >
+
+            <div class="platform-icon">
+
+                <i class="fa-brands fa-instagram"></i>
+
+            </div>
+
+
+            <div class="platform-name">
+                Instagram
+            </div>
+
+        </button>
+
+
+
+        <!-- YOUTUBE -->
+
+        <button
+            class="platform-card youtube"
+            onclick="selectPlatform('YouTube')"
+        >
+
+            <div class="platform-icon">
+
+                <i class="fa-brands fa-youtube"></i>
+
+            </div>
+
+
+            <div class="platform-name">
+                YouTube
+            </div>
+
+        </button>
+
+
+
+        <!-- FACEBOOK -->
+
+        <button
+            class="platform-card facebook"
+            onclick="selectPlatform('Facebook')"
+        >
+
+            <div class="platform-icon">
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+            </div>
+
+
+            <div class="platform-name">
+                Facebook
+            </div>
+
+        </button>
+
+
+
+        <!-- BACK -->
+
+        <button
+            class="back-button"
+            onclick="goHome()"
+        >
+
+            ← Back
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     JAVASCRIPT
+================================================== -->
+
 <script>
 
-function openPlatformPage() {
 
-    document.getElementById("homePage").style.display = "none";
+/* --------------------------------
+   OPEN PLATFORM PAGE
+-------------------------------- */
 
-    document.getElementById("platformPage").style.display = "flex";
+function showPlatformPage() {
+
+    document
+        .getElementById("homePage")
+        .classList.remove("active");
+
+
+    document
+        .getElementById("platformPage")
+        .classList.add("active");
+
 }
+
+
+
+/* --------------------------------
+   BACK TO HOME
+-------------------------------- */
 
 function goHome() {
 
-    document.getElementById("platformPage").style.display = "none";
+    document
+        .getElementById("platformPage")
+        .classList.remove("active");
 
-    document.getElementById("homePage").style.display = "flex";
+
+    document
+        .getElementById("homePage")
+        .classList.add("active");
+
 }
+
+
+
+/* --------------------------------
+   PLATFORM CLICK
+-------------------------------- */
 
 function selectPlatform(platform) {
 
@@ -263,7 +695,10 @@ function selectPlatform(platform) {
 
 }
 
-    </script>
+
+</script>
+
 
 </body>
+
 </html>
