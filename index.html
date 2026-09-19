@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PromoHub</title>
 
@@ -15,10 +11,6 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 
 <style>
 
-/* ================================
-   BASIC
-================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -26,347 +18,139 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
 }
 
 body {
-
-    min-height: 100vh;
-
     font-family: Arial, sans-serif;
-
-    background:
-    linear-gradient(
-        135deg,
-        #2563eb,
-        #7c3aed,
-        #db2777,
-        #f97316
-    );
-
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777);
     color: white;
-
 }
-
-
-/* ================================
-   PAGE SYSTEM
-================================ */
 
 .page {
     display: none;
+    min-height: 100vh;
+    padding: 40px 20px;
 }
 
 .page.active {
     display: block;
 }
 
-
-/* ================================
-   CONTAINER
-================================ */
-
 .container {
-
     width: 100%;
-
-    max-width: 600px;
-
+    max-width: 500px;
     margin: auto;
-
-    padding: 25px 18px 40px;
-
+    text-align: center;
 }
 
-
-/* ================================
-   HOME PAGE
-================================ */
+/* HOME */
 
 .logo {
-
-    text-align: center;
-
-    font-size: 38px;
-
+    font-size: 42px;
     font-weight: bold;
-
-    margin-top: 25px;
-
+    margin-top: 50px;
     margin-bottom: 15px;
-
 }
 
 .welcome {
-
-    text-align: center;
-
     font-size: 22px;
-
-    font-weight: bold;
-
-    margin-bottom: 12px;
-
+    margin-bottom: 45px;
 }
 
 .question {
-
-    text-align: center;
-
-    font-size: 18px;
-
-    margin-bottom: 30px;
-
-}
-
-
-/* ================================
-   HOME CARDS
-================================ */
-
-.home-card {
-
-    width: 100%;
-
-    border: none;
-
-    border-radius: 20px;
-
-    padding: 25px 20px;
-
-    margin-bottom: 18px;
-
-    cursor: pointer;
-
     font-size: 20px;
+    margin-bottom: 25px;
+}
 
-    font-weight: bold;
-
+.home-button {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 18px;
+    border: none;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.18);
     color: white;
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.20);
-
-    transition: 0.25s;
-
-}
-
-.home-card:hover {
-    transform: translateY(-3px);
-}
-
-.story-card {
-
-    background:
-    linear-gradient(
-        135deg,
-        #f59e0b,
-        #ef4444
-    );
-
-}
-
-.logo-card {
-
-    background:
-    linear-gradient(
-        135deg,
-        #06b6d4,
-        #2563eb
-    );
-
-}
-
-.home-icon {
-
-    font-size: 28px;
-
-    margin-right: 12px;
-
-}
-
-
-/* ================================
-   PLATFORM PAGE
-================================ */
-
-.platform-title {
-
-    text-align: center;
-
-    font-size: 32px;
-
+    font-size: 18px;
     font-weight: bold;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+}
 
+.home-button:hover {
+    background: rgba(255,255,255,0.28);
+}
+
+/* PLATFORM PAGE */
+
+.page-title {
+    font-size: 32px;
+    font-weight: bold;
     margin-top: 20px;
-
     margin-bottom: 15px;
-
 }
 
-.platform-subtitle {
-
-    text-align: center;
-
-    font-size: 17px;
-
+.page-subtitle {
+    font-size: 18px;
     margin-bottom: 30px;
-
 }
-
-
-/* ================================
-   PLATFORM CARD
-================================ */
 
 .platform-card {
-
     width: 100%;
-
     display: flex;
-
     align-items: center;
-
-    border: none;
-
-    border-radius: 18px;
-
+    gap: 18px;
     padding: 20px;
-
-    margin-bottom: 16px;
-
-    cursor: pointer;
-
+    margin-bottom: 18px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.25);
     color: white;
-
-    font-size: 20px;
-
-    font-weight: bold;
-
-    box-shadow:
-    0 8px 20px rgba(0,0,0,0.20);
-
-    transition: 0.25s;
-
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.platform-card:hover {
-
-    transform: translateY(-3px);
-
-}
-
-.platform-icon {
-
-    width: 55px;
-
-    font-size: 32px;
-
+.platform-card i {
+    width: 45px;
+    font-size: 35px;
     text-align: center;
-
 }
 
 .platform-name {
-
-    flex: 1;
-
-    text-align: left;
-
-    padding-left: 15px;
-
+    font-size: 20px;
+    font-weight: bold;
 }
 
-.instagram {
-
-    background:
-    linear-gradient(
-        135deg,
-        #833ab4,
-        #fd1d1d,
-        #fcb045
-    );
-
-}
-
-.youtube {
-
-    background:
-    linear-gradient(
-        135deg,
-        #ff0000,
-        #cc0000
-    );
-
-}
-
-.facebook {
-
-    background:
-    linear-gradient(
-        135deg,
-        #1877f2,
-        #0d47a1
-    );
-
-}
-
-
-/* ================================
-   BRAND PAGE
-================================ */
+/* BRAND PAGE */
 
 .brand-title {
-
-    text-align: center;
-
-    font-size: 30px;
-
+    font-size: 32px;
     font-weight: bold;
-
     margin-top: 20px;
-
     margin-bottom: 10px;
-
 }
 
 .brand-subtitle {
-
-    text-align: center;
-
-    font-size: 17px;
-
-    margin-bottom: 25px;
-
+    font-size: 18px;
+    margin-bottom: 30px;
 }
-
-
-/* ================================
-   BRAND CARD
-================================ */
 
 .brand-card {
-
-    background:
-    rgba(255,255,255,0.15);
-
-    border:
-    1px solid rgba(255,255,255,0.30);
-
+    background: rgba(255,255,255,0.16);
+    border: 1px solid rgba(255,255,255,0.28);
     border-radius: 20px;
-
     padding: 22px;
-
     margin-bottom: 18px;
-
     text-align: center;
-
     backdrop-filter: blur(10px);
-
-    box-shadow:
-    0 10px 25px rgba(0,0,0,0.15);
-
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+/* BRAND IMAGE */
 
 .brand-image {
     width: 120px;
     height: 120px;
-    margin: 0 auto;
+    margin: 0 auto 15px;
     display: block;
     object-fit: contain;
     border-radius: 20px;
@@ -375,103 +159,47 @@ body {
     box-sizing: border-box;
 }
 
-
-}
+/* BRAND NAME */
 
 .brand-name {
-
-    font-size: 22px;
-
+    font-size: 20px;
     font-weight: bold;
-
-    margin-top: 15px;
-
 }
 
-
-/* ================================
-   BUTTONS
-================================ */
-
-.next-button,
-.brand-back-button {
-
-    width: 100%;
-
-    padding: 15px;
-
-    border: none;
-
-    border-radius: 12px;
-
-    font-size: 18px;
-
-    font-weight: bold;
-
-    margin-top: 12px;
-
-    cursor: pointer;
-
-}
+/* BUTTONS */
 
 .next-button {
-
+    width: 100%;
+    padding: 17px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 18px;
     background: white;
-
-    color: #2563eb;
-
+    color: #4f46e5;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-.brand-back-button {
-
-    background:
-    rgba(255,255,255,0.20);
-
+.brand-back-button,
+.back-button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.18);
     color: white;
-
+    font-size: 17px;
+    cursor: pointer;
 }
-
-
-/* ================================
-   MOBILE
-================================ */
-
-@media (max-width: 480px) {
-
-    .logo {
-        font-size: 34px;
-    }
-
-    .welcome {
-        font-size: 20px;
-    }
-
-    .platform-title {
-        font-size: 28px;
-    }
-
-    .brand-title {
-        font-size: 27px;
-    }
-
-}
-
-
-/* ================================
-   END
-================================ */
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =================================================
-     HOME PAGE
-================================================= -->
+<!-- HOME PAGE -->
 
 <div id="homePage" class="page active">
 
@@ -489,30 +217,12 @@ body {
             Aap kya promote karna chahte hain?
         </div>
 
-
-        <!-- STORY -->
-
-        <button
-        class="home-card story-card"
-        onclick="showPlatformPage()">
-
-            <i class="fa-solid fa-book home-icon"></i>
-
+        <button class="home-button" onclick="showPlatformPage()">
             Story Promotion
-
         </button>
 
-
-        <!-- LOGO -->
-
-        <button
-        class="home-card logo-card"
-        onclick="showPlatformPage()">
-
-            <i class="fa-solid fa-image home-icon"></i>
-
+        <button class="home-button" onclick="showPlatformPage()">
             Logo Promotion
-
         </button>
 
     </div>
@@ -520,86 +230,59 @@ body {
 </div>
 
 
-
-<!-- =================================================
-     PLATFORM PAGE
-================================================= -->
+<!-- PLATFORM PAGE -->
 
 <div id="platformPage" class="page">
 
     <div class="container">
 
-        <div class="platform-title">
+        <div class="page-title">
             Choose Platform
         </div>
 
-        <div class="platform-subtitle">
+        <div class="page-subtitle">
             Aap kis platform par promotion karna chahte hain?
         </div>
 
 
-        <!-- INSTAGRAM -->
+        <div class="platform-card"
+             onclick="selectPlatform('Instagram')">
 
-        <button
-        class="platform-card instagram"
-        onclick="selectPlatform('Instagram')">
-
-            <div class="platform-icon">
-
-                <i class="fa-brands fa-instagram"></i>
-
-            </div>
+            <i class="fa-brands fa-instagram"></i>
 
             <div class="platform-name">
                 Instagram
             </div>
 
-        </button>
+        </div>
 
 
-        <!-- YOUTUBE -->
+        <div class="platform-card"
+             onclick="selectPlatform('YouTube')">
 
-        <button
-        class="platform-card youtube"
-        onclick="selectPlatform('YouTube')">
-
-            <div class="platform-icon">
-
-                <i class="fa-brands fa-youtube"></i>
-
-            </div>
+            <i class="fa-brands fa-youtube"></i>
 
             <div class="platform-name">
                 YouTube
             </div>
 
-        </button>
+        </div>
 
 
-        <!-- FACEBOOK -->
+        <div class="platform-card"
+             onclick="selectPlatform('Facebook')">
 
-        <button
-        class="platform-card facebook"
-        onclick="selectPlatform('Facebook')">
-
-            <div class="platform-icon">
-
-                <i class="fa-brands fa-facebook"></i>
-
-            </div>
+            <i class="fa-brands fa-facebook"></i>
 
             <div class="platform-name">
                 Facebook
             </div>
 
-        </button>
+        </div>
 
 
-        <!-- BACK -->
-
-        <button
-        class="brand-back-button"
-        onclick="goHome()">
+        <button class="back-button"
+                onclick="goHome()">
 
             ← Back
 
@@ -610,10 +293,7 @@ body {
 </div>
 
 
-
-<!-- =================================================
-     BRAND PAGE
-================================================= -->
+<!-- BRAND PAGE -->
 
 <div id="brandPage" class="page">
 
@@ -627,9 +307,7 @@ body {
         </div>
 
         <div class="brand-subtitle">
-
             Select a brand for promotion
-
         </div>
 
 
@@ -637,9 +315,9 @@ body {
 
         <div class="brand-card">
 
-            <div class="brand-image">
-                B1
-            </div>
+            <img src="brand1.jpg"
+                 class="brand-image"
+                 alt="Brand One">
 
             <div class="brand-name">
                 Brand One
@@ -652,9 +330,9 @@ body {
 
         <div class="brand-card">
 
-            <div class="brand-image">
-                B2
-            </div>
+            <img src="brand2.jpg"
+                 class="brand-image"
+                 alt="Brand Two">
 
             <div class="brand-name">
                 Brand Two
@@ -667,9 +345,9 @@ body {
 
         <div class="brand-card">
 
-            <div class="brand-image">
-                B3
-            </div>
+            <img src="brand3.jpg"
+                 class="brand-image"
+                 alt="Brand Three">
 
             <div class="brand-name">
                 Brand Three
@@ -682,9 +360,9 @@ body {
 
         <div class="brand-card">
 
-            <div class="brand-image">
-                B4
-            </div>
+            <img src="brand4.jpg"
+                 class="brand-image"
+                 alt="Brand Four">
 
             <div class="brand-name">
                 Brand Four
@@ -693,22 +371,16 @@ body {
         </div>
 
 
-        <!-- NEXT -->
-
-        <button
-        class="next-button"
-        onclick="nextPage()">
+        <button class="next-button"
+                onclick="nextPage()">
 
             Next →
 
         </button>
 
 
-        <!-- BACK -->
-
-        <button
-        class="brand-back-button"
-        onclick="backToPlatform()">
+        <button class="brand-back-button"
+                onclick="backToPlatform()">
 
             ← Back
 
@@ -719,108 +391,56 @@ body {
 </div>
 
 
-
-<!-- =================================================
-     JAVASCRIPT
-================================================= -->
-
 <script>
-
-
-/* ================================
-   SHOW PLATFORM
-================================ */
 
 function showPlatformPage() {
 
-    document
-    .getElementById("homePage")
-    .classList
-    .remove("active");
+    document.getElementById("homePage")
+        .classList.remove("active");
 
-    document
-    .getElementById("brandPage")
-    .classList
-    .remove("active");
+    document.getElementById("brandPage")
+        .classList.remove("active");
 
-    document
-    .getElementById("platformPage")
-    .classList
-    .add("active");
-
+    document.getElementById("platformPage")
+        .classList.add("active");
 }
 
-
-/* ================================
-   HOME
-================================ */
 
 function goHome() {
 
-    document
-    .getElementById("platformPage")
-    .classList
-    .remove("active");
+    document.getElementById("platformPage")
+        .classList.remove("active");
 
-    document
-    .getElementById("brandPage")
-    .classList
-    .remove("active");
+    document.getElementById("brandPage")
+        .classList.remove("active");
 
-    document
-    .getElementById("homePage")
-    .classList
-    .add("active");
-
+    document.getElementById("homePage")
+        .classList.add("active");
 }
 
-
-/* ================================
-   SELECT PLATFORM
-================================ */
 
 function selectPlatform(platform) {
 
-    document
-    .getElementById("platformPage")
-    .classList
-    .remove("active");
+    document.getElementById("platformPage")
+        .classList.remove("active");
 
-    document
-    .getElementById("brandPage")
-    .classList
-    .add("active");
+    document.getElementById("brandPage")
+        .classList.add("active");
 
-
-    document
-    .getElementById("brandPageTitle")
-    .innerText = platform + " Brands";
-
+    document.getElementById("brandPageTitle")
+        .innerText = platform + " Brands";
 }
 
-
-/* ================================
-   BACK TO PLATFORM
-================================ */
 
 function backToPlatform() {
 
-    document
-    .getElementById("brandPage")
-    .classList
-    .remove("active");
+    document.getElementById("brandPage")
+        .classList.remove("active");
 
-    document
-    .getElementById("platformPage")
-    .classList
-    .add("active");
-
+    document.getElementById("platformPage")
+        .classList.add("active");
 }
 
-
-/* ================================
-   NEXT
-================================ */
 
 function nextPage() {
 
@@ -828,10 +448,7 @@ function nextPage() {
 
 }
 
-
 </script>
 
-
 </body>
-
-      </html>
+</html>
