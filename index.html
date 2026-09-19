@@ -1,94 +1,219 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brand Boost</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>PromoHub</title>
 
-    body {
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
-      color: white;
-    }
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    .container {
-      width: 90%;
-      max-width: 500px;
-      text-align: center;
-    }
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
 
-    .welcome {
-      font-size: 28px;
-      font-weight: 700;
-      margin-bottom: 45px;
-      letter-spacing: 0.3px;
-    }
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
 
-    .question {
-      font-size: 21px;
-      font-weight: 600;
-      margin-bottom: 25px;
-    }
+.box {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
 
-    .option {
-      width: 100%;
-      padding: 20px;
-      margin: 16px 0;
-      border: none;
-      border-radius: 16px;
-      font-size: 19px;
-      font-weight: 700;
-      color: white;
-      cursor: pointer;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-    }
+h1 {
+  font-size: 30px;
+  margin-bottom: 45px;
+}
 
-    .story {
-      background: linear-gradient(135deg, #2563eb, #3b82f6);
-    }
+h2 {
+  font-size: 23px;
+  margin-bottom: 18px;
+}
 
-    .logo {
-      background: linear-gradient(135deg, #059669, #10b981);
-    }
+.question {
+  font-size: 18px;
+  margin-bottom: 28px;
+}
 
-    .option:active {
-      transform: scale(0.98);
-    }
-  </style>
+.option {
+  width: 100%;
+  padding: 20px;
+  margin: 14px 0;
+  border: none;
+  border-radius: 16px;
+  font-size: 19px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.story {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.logo {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.platform {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  background: white;
+  color: #111827;
+  margin: 15px 0;
+  padding: 17px 20px;
+  border-radius: 15px;
+  border: none;
+  width: 100%;
+  font-size: 19px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 7px 18px rgba(0,0,0,0.22);
+}
+
+.platform-icon {
+  width: 42px;
+  height: 42px;
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.back {
+  margin-top: 25px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<!-- HOME PAGE -->
+<div class="page" id="home">
+  <div class="box">
 
-    <div class="welcome">
-      Welcome to Our Promotion Platform
-    </div>
+    <h1>Welcome to Our Promotion Platform</h1>
 
     <div class="question">
       Aap kya promote karna chahte hain?
     </div>
 
-    <button class="option story">
-      🔵 Story Promotion
+    <button class="option story" onclick="showPage('storyPage')">
+      Story Promotion
     </button>
 
-    <button class="option logo">
-      🟢 Logo Promotion
+    <button class="option logo" onclick="showPage('logoPage')">
+      Logo Promotion
     </button>
 
   </div>
+</div>
+
+
+<!-- STORY PROMOTION PAGE -->
+<div class="page hidden" id="storyPage">
+  <div class="box">
+
+    <h2>Story Promotion</h2>
+
+    <div class="question">
+      Aap kis platform par story promotion karna chahte hain?
+    </div>
+
+    <button class="platform">
+      <span class="platform-icon">◎</span>
+      Instagram
+    </button>
+
+    <button class="platform">
+      <span class="platform-icon">▶</span>
+      YouTube
+    </button>
+
+    <button class="platform">
+      <span class="platform-icon">f</span>
+      Facebook
+    </button>
+
+    <button class="back" onclick="showPage('home')">
+      ← Back
+    </button>
+
+  </div>
+</div>
+
+
+<!-- LOGO PROMOTION PAGE -->
+<div class="page hidden" id="logoPage">
+  <div class="box">
+
+    <h2>Logo Promotion</h2>
+
+    <div class="question">
+      Aap kis platform par logo promotion karna chahte hain?
+    </div>
+
+    <button class="platform">
+      <span class="platform-icon">◎</span>
+      Instagram
+    </button>
+
+    <button class="platform">
+      <span class="platform-icon">▶</span>
+      YouTube
+    </button>
+
+    <button class="platform">
+      <span class="platform-icon">f</span>
+      Facebook
+    </button>
+
+    <button class="back" onclick="showPage('home')">
+      ← Back
+    </button>
+
+  </div>
+</div>
+
+
+<script>
+function showPage(pageId) {
+
+  document.getElementById("home").classList.add("hidden");
+  document.getElementById("storyPage").classList.add("hidden");
+  document.getElementById("logoPage").classList.add("hidden");
+
+  document.getElementById(pageId).classList.remove("hidden");
+}
+</script>
 
 </body>
-</html>
+  </html>
