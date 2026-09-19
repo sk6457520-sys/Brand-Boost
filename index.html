@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Boost</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+      color: white;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .welcome {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 45px;
+      letter-spacing: 0.3px;
+    }
+
+    .question {
+      font-size: 21px;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+
+    .option {
+      width: 100%;
+      padding: 20px;
+      margin: 16px 0;
+      border: none;
+      border-radius: 16px;
+      font-size: 19px;
+      font-weight: 700;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+
+    .story {
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+    }
+
+    .logo {
+      background: linear-gradient(135deg, #059669, #10b981);
+    }
+
+    .option:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="welcome">
+      Welcome to Our Promotion Platform
+    </div>
+
+    <div class="question">
+      Aap kya promote karna chahte hain?
+    </div>
+
+    <button class="option story">
+      🔵 Story Promotion
+    </button>
+
+    <button class="option logo">
+      🟢 Logo Promotion
+    </button>
+
+  </div>
+
+</body>
+</html>
