@@ -1,219 +1,421 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>PromoHub</title>
 
+<!-- Social Media Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 <style>
+
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #312e81,
+        #1e3a8a,
+        #0f766e
+    );
 }
 
 .page {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
 }
 
 .box {
-  width: 100%;
-  max-width: 500px;
-  text-align: center;
+    width: 100%;
+    max-width: 520px;
+    text-align: center;
 }
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 45px;
+    font-size: 32px;
+    line-height: 1.2;
+    margin-bottom: 45px;
 }
 
 h2 {
-  font-size: 23px;
-  margin-bottom: 18px;
+    font-size: 30px;
+    margin-bottom: 22px;
 }
 
 .question {
-  font-size: 18px;
-  margin-bottom: 28px;
+    font-size: 19px;
+    line-height: 1.5;
+    margin-bottom: 30px;
 }
 
-.option {
-  width: 100%;
-  padding: 20px;
-  margin: 14px 0;
-  border: none;
-  border-radius: 16px;
-  font-size: 19px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+/* Main buttons */
+
+.main-button {
+    width: 100%;
+    border: none;
+    border-radius: 18px;
+
+    padding: 21px 20px;
+    margin: 12px 0;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,0.25);
+
+    transition: transform 0.2s;
 }
 
-.story {
-  background: linear-gradient(135deg, #2563eb, #3b82f6);
+.main-button:active {
+    transform: scale(0.97);
 }
 
-.logo {
-  background: linear-gradient(135deg, #059669, #10b981);
+.story-button {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #4f46e5
+    );
 }
+
+.logo-button {
+    background: linear-gradient(
+        135deg,
+        #059669,
+        #10b981
+    );
+}
+
+/* Platform buttons */
 
 .platform {
-  display: flex;
-  align-items: center;
-  text-align: left;
-  background: white;
-  color: #111827;
-  margin: 15px 0;
-  padding: 17px 20px;
-  border-radius: 15px;
-  border: none;
-  width: 100%;
-  font-size: 19px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 7px 18px rgba(0,0,0,0.22);
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    text-align: left;
+
+    background: rgba(255,255,255,0.97);
+    color: #111827;
+
+    border: none;
+    border-radius: 18px;
+
+    padding: 18px 22px;
+    margin: 15px 0;
+
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 9px 22px rgba(0,0,0,0.25);
+
+    transition: transform 0.2s;
 }
 
+.platform:active {
+    transform: scale(0.97);
+}
+
+/* Social media icons */
+
 .platform-icon {
-  width: 42px;
-  height: 42px;
-  margin-right: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  font-weight: bold;
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 20px;
+
+    font-size: 30px;
+}
+
+/* Instagram */
+
+.instagram-icon {
+    color: #E1306C;
+}
+
+/* YouTube */
+
+.youtube-icon {
+    color: #FF0000;
+}
+
+/* Facebook */
+
+.facebook-icon {
+    color: #1877F2;
+}
+
+/* Back button */
+
+.back {
+    margin-top: 25px;
+
+    padding: 12px 28px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,0.55);
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    cursor: pointer;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
-.back {
-  margin-top: 25px;
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.5);
-  color: white;
-  padding: 12px 25px;
-  border-radius: 10px;
-  font-size: 16px;
-}
 </style>
 </head>
 
 <body>
 
+
+<!-- ========================= -->
 <!-- HOME PAGE -->
+<!-- ========================= -->
+
 <div class="page" id="home">
-  <div class="box">
 
-    <h1>Welcome to Our Promotion Platform</h1>
+    <div class="box">
 
-    <div class="question">
-      Aap kya promote karna chahte hain?
+        <h1>
+            Welcome to Our<br>
+            Promotion Platform
+        </h1>
+
+        <div class="question">
+            Aap kya promote karna chahte hain?
+        </div>
+
+
+        <button
+            class="main-button story-button"
+            onclick="showPage('storyPage')">
+
+            Story Promotion
+
+        </button>
+
+
+        <button
+            class="main-button logo-button"
+            onclick="showPage('logoPage')">
+
+            Logo Promotion
+
+        </button>
+
     </div>
 
-    <button class="option story" onclick="showPage('storyPage')">
-      Story Promotion
-    </button>
-
-    <button class="option logo" onclick="showPage('logoPage')">
-      Logo Promotion
-    </button>
-
-  </div>
 </div>
 
 
+
+<!-- ========================= -->
 <!-- STORY PROMOTION PAGE -->
+<!-- ========================= -->
+
 <div class="page hidden" id="storyPage">
-  <div class="box">
 
-    <h2>Story Promotion</h2>
+    <div class="box">
 
-    <div class="question">
-      Aap kis platform par story promotion karna chahte hain?
+        <h2>
+            Story Promotion
+        </h2>
+
+        <div class="question">
+            Aap kis platform par story promotion
+            karna chahte hain?
+        </div>
+
+
+        <!-- Instagram -->
+
+        <button class="platform">
+
+            <span class="platform-icon instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+
+            Instagram
+
+        </button>
+
+
+        <!-- YouTube -->
+
+        <button class="platform">
+
+            <span class="platform-icon youtube-icon">
+                <i class="fa-brands fa-youtube"></i>
+            </span>
+
+            YouTube
+
+        </button>
+
+
+        <!-- Facebook -->
+
+        <button class="platform">
+
+            <span class="platform-icon facebook-icon">
+                <i class="fa-brands fa-facebook"></i>
+            </span>
+
+            Facebook
+
+        </button>
+
+
+        <button
+            class="back"
+            onclick="showPage('home')">
+
+            ← Back
+
+        </button>
+
     </div>
 
-    <button class="platform">
-      <span class="platform-icon">◎</span>
-      Instagram
-    </button>
-
-    <button class="platform">
-      <span class="platform-icon">▶</span>
-      YouTube
-    </button>
-
-    <button class="platform">
-      <span class="platform-icon">f</span>
-      Facebook
-    </button>
-
-    <button class="back" onclick="showPage('home')">
-      ← Back
-    </button>
-
-  </div>
 </div>
 
 
+
+<!-- ========================= -->
 <!-- LOGO PROMOTION PAGE -->
+<!-- ========================= -->
+
 <div class="page hidden" id="logoPage">
-  <div class="box">
 
-    <h2>Logo Promotion</h2>
+    <div class="box">
 
-    <div class="question">
-      Aap kis platform par logo promotion karna chahte hain?
+        <h2>
+            Logo Promotion
+        </h2>
+
+        <div class="question">
+            Aap kis platform par logo promotion
+            karna chahte hain?
+        </div>
+
+
+        <!-- Instagram -->
+
+        <button class="platform">
+
+            <span class="platform-icon instagram-icon">
+                <i class="fa-brands fa-instagram"></i>
+            </span>
+
+            Instagram
+
+        </button>
+
+
+        <!-- YouTube -->
+
+        <button class="platform">
+
+            <span class="platform-icon youtube-icon">
+                <i class="fa-brands fa-youtube"></i>
+            </span>
+
+            YouTube
+
+        </button>
+
+
+        <!-- Facebook -->
+
+        <button class="platform">
+
+            <span class="platform-icon facebook-icon">
+                <i class="fa-brands fa-facebook"></i>
+            </span>
+
+            Facebook
+
+        </button>
+
+
+        <button
+            class="back"
+            onclick="showPage('home')">
+
+            ← Back
+
+        </button>
+
     </div>
 
-    <button class="platform">
-      <span class="platform-icon">◎</span>
-      Instagram
-    </button>
-
-    <button class="platform">
-      <span class="platform-icon">▶</span>
-      YouTube
-    </button>
-
-    <button class="platform">
-      <span class="platform-icon">f</span>
-      Facebook
-    </button>
-
-    <button class="back" onclick="showPage('home')">
-      ← Back
-    </button>
-
-  </div>
 </div>
 
+
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
 
 <script>
+
 function showPage(pageId) {
 
-  document.getElementById("home").classList.add("hidden");
-  document.getElementById("storyPage").classList.add("hidden");
-  document.getElementById("logoPage").classList.add("hidden");
+    document
+        .getElementById("home")
+        .classList.add("hidden");
 
-  document.getElementById(pageId).classList.remove("hidden");
+    document
+        .getElementById("storyPage")
+        .classList.add("hidden");
+
+    document
+        .getElementById("logoPage")
+        .classList.add("hidden");
+
+
+    document
+        .getElementById(pageId)
+        .classList.remove("hidden");
+
 }
+
 </script>
 
 </body>
-  </html>
+</html>
