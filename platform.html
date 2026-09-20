@@ -90,33 +90,25 @@
       letter-spacing: 1px;
     }
 
-    .buttons {
-      display: flex;
-      gap: 15px;
+    .back {
+      display: block;
       margin-top: 30px;
-    }
+      padding: 16px;
 
-    .btn {
-      flex: 1;
-      padding: 16px 10px;
-      border-radius: 14px;
+      background: #374151;
+      color: white;
+
       text-align: center;
       text-decoration: none;
-      color: white;
+
+      border-radius: 14px;
+
       font-size: 18px;
       font-weight: bold;
     }
 
-    .back {
-      background: #374151;
-    }
-
-    .next {
-      background: linear-gradient(135deg, #6d28d9, #9333ea);
-    }
-
     .platform:active,
-    .btn:active {
+    .back:active {
       transform: scale(0.98);
     }
   </style>
@@ -127,22 +119,26 @@
   <div class="container">
 
     <div class="header">
+
       <h1>
         आप किस प्लेटफॉर्म पर<br>
         लोगो का प्रमोशन करना चाहते हैं?
       </h1>
 
-      <p>नीचे अपना प्लेटफॉर्म चुनें</p>
+      <p>
+        नीचे अपना प्लेटफॉर्म चुनें
+      </p>
+
     </div>
 
 
     <!-- INSTAGRAM -->
 
-    <a href="#" class="platform">
+    <a href="brands.html" class="platform">
 
       <div class="icon">
 
-        <svg viewBox="0 0 24 24" aria-label="Instagram">
+        <svg viewBox="0 0 24 24">
 
           <rect
             x="3"
@@ -184,11 +180,11 @@
 
     <!-- YOUTUBE -->
 
-    <a href="#" class="platform">
+    <a href="brands.html" class="platform">
 
       <div class="icon">
 
-        <svg viewBox="0 0 24 24" aria-label="YouTube">
+        <svg viewBox="0 0 24 24">
 
           <rect
             x="2.5"
@@ -217,11 +213,11 @@
 
     <!-- FACEBOOK -->
 
-    <a href="#" class="platform">
+    <a href="brands.html" class="platform">
 
       <div class="icon">
 
-        <svg viewBox="0 0 24 24" aria-label="Facebook">
+        <svg viewBox="0 0 24 24">
 
           <circle
             cx="12"
@@ -249,21 +245,13 @@
     </a>
 
 
-    <!-- BACK / NEXT -->
+    <!-- BACK BUTTON ONLY -->
 
-    <div class="buttons">
-
-      <a href="index.html" class="btn back">
-        ← BACK
-      </a>
-
-      <a href="brands.html" class="btn next">
-        NEXT →
-      </a>
-
-    </div>
+    <a href="index.html" class="back">
+      ← BACK
+    </a>
 
   </div>
 
 </body>
-</html>
+  </html>
