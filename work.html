@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Brand Promotion - Work Details</title>
+  <title>Work Details</title>
 
   <style>
     * {
@@ -14,41 +14,41 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f3f4f6;
+      background: #f5f6fa;
       color: #222;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #4b2bbf, #7b4de8);
+      color: white;
+      padding: 30px 18px;
+      text-align: center;
+      border-radius: 0 0 25px 25px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 27px;
+    }
+
+    .header p {
+      margin: 8px 0 0;
+      font-size: 15px;
+      opacity: 0.9;
     }
 
     .container {
       width: 92%;
       max-width: 650px;
-      margin: 25px auto;
-    }
-
-    .header {
-      background: #4b2bbf;
-      color: white;
-      padding: 25px 18px;
-      border-radius: 18px;
-      text-align: center;
-      margin-bottom: 18px;
-    }
-
-    .header h1 {
-      margin: 0;
-      font-size: 25px;
-    }
-
-    .header p {
-      margin: 8px 0 0;
-      font-size: 16px;
+      margin: 22px auto;
     }
 
     .card {
       background: white;
       padding: 22px;
-      border-radius: 16px;
-      margin-bottom: 16px;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      margin-bottom: 17px;
+      border-radius: 18px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
     }
 
     .card h2 {
@@ -58,51 +58,74 @@
     }
 
     .card p {
-      line-height: 1.6;
       font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .card ul {
+      padding-left: 20px;
     }
 
     .card li {
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       line-height: 1.5;
     }
 
-    .example {
+    .payment-box {
       background: #f0ecff;
-      padding: 15px;
-      border-radius: 10px;
+      padding: 16px;
+      border-radius: 12px;
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
     }
 
-    .back {
+    .example-box {
+      background: #f7f7f7;
+      padding: 16px;
+      border-radius: 12px;
+      line-height: 1.6;
+    }
+
+    .back-btn {
       display: block;
       text-align: center;
+      text-decoration: none;
       background: #4b2bbf;
       color: white;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 10px;
+      padding: 15px;
+      border-radius: 12px;
       font-size: 17px;
-      margin-top: 20px;
+      margin: 22px 0;
+    }
+
+    .back-btn:active {
+      transform: scale(0.98);
     }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="header">
+    <h1>WORK DETAILS</h1>
+    <p>Brand Promotion Campaign</p>
+  </div>
 
-    <div class="header">
-      <h1>Brand Promotion</h1>
-      <p>WORK DETAILS</p>
-    </div>
+  <div class="container">
 
     <div class="card">
       <h2>💰 Payment</h2>
 
+      <div class="payment-box">
+        Payment Information
+      </div>
+
       <p>
-        Payment information for the demo campaign will be displayed here.
+        Campaign payment information can be displayed in this section.
       </p>
     </div>
+
 
     <div class="card">
       <h2>📌 Work Requirements</h2>
@@ -111,35 +134,42 @@
         <li>Follow the campaign instructions.</li>
         <li>Use the provided brand material correctly.</li>
         <li>Submit the required content when requested.</li>
-        <li>Follow all applicable campaign rules.</li>
+        <li>Follow the applicable campaign rules.</li>
+        <li>Keep submitted information accurate.</li>
       </ul>
     </div>
+
 
     <div class="card">
       <h2>🔄 Long-Term Work</h2>
 
       <p>
-        Campaign duration and continuation information can be displayed
-        in this section.
+        Campaign duration and continuation information can be
+        displayed here.
+      </p>
+
+      <p>
+        Regular campaign updates can also be shown in this section.
       </p>
     </div>
+
 
     <div class="card">
       <h2>📊 Example</h2>
 
-      <div class="example">
-        <p>
-          <strong>Example:</strong><br>
-          A sample campaign calculation or result can be displayed here.
-        </p>
+      <div class="example-box">
+        <strong>Example:</strong><br><br>
+        A sample campaign calculation or result can be
+        displayed here.
       </div>
     </div>
 
-    <a class="back" href="index.html">
+
+    <a class="back-btn" href="index.html">
       ← Back to Brands
     </a>
 
   </div>
 
 </body>
-                            </html>
+  </html>
