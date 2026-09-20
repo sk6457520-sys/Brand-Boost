@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Platform Selection</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #07152f, #101a35, #32165c);
+      color: white;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 650px;
+      margin: auto;
+      padding: 45px 0 30px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 31px;
+      line-height: 1.45;
+      margin: 10px 0 35px;
+    }
+
+    .platform {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      padding: 22px;
+      margin-bottom: 20px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 22px;
+      color: white;
+      text-decoration: none;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    }
+
+    .icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 18px;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 38px;
+      flex-shrink: 0;
+    }
+
+    .platform-name {
+      font-size: 23px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .btn {
+      flex: 1;
+      padding: 16px 10px;
+      border-radius: 14px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .back {
+      background: #374151;
+    }
+
+    .next {
+      background: linear-gradient(135deg, #6d28d9, #9333ea);
+    }
+
+    .btn:active,
+    .platform:active {
+      transform: scale(0.98);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>
+      आप किस प्लेटफॉर्म पर लोगो का प्रमोशन करना चाहते हैं?
+    </h1>
+
+    <a href="#" class="platform">
+      <div class="icon">◎</div>
+      <div class="platform-name">INSTAGRAM</div>
+    </a>
+
+    <a href="#" class="platform">
+      <div class="icon">▶</div>
+      <div class="platform-name">YOUTUBE</div>
+    </a>
+
+    <a href="#" class="platform">
+      <div class="icon">f</div>
+      <div class="platform-name">FACEBOOK</div>
+    </a>
+
+    <div class="buttons">
+
+      <a href="index.html" class="btn back">
+        ← BACK
+      </a>
+
+      <a href="brands.html" class="btn next">
+        NEXT →
+      </a>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
