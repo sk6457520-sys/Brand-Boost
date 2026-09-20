@@ -1,454 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PromoHub</title>
+  <title>Brand Promotion</title>
 
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f8;
+      color: #222;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+    .header {
+      background: linear-gradient(135deg, #4b25c5, #7440df);
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
+      border-radius: 0 0 25px 25px;
+    }
 
-body {
-    font-family: Arial, sans-serif;
-    min-height: 100vh;
-    background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777);
-    color: white;
-}
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+    }
 
-.page {
-    display: none;
-    min-height: 100vh;
-    padding: 40px 20px;
-}
+    .container {
+      width: 92%;
+      max-width: 650px;
+      margin: 25px auto;
+    }
 
-.page.active {
-    display: block;
-}
+    .promotion-card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      text-align: center;
+      cursor: pointer;
+    }
 
-.container {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    text-align: center;
-}
+    .promotion-card h2 {
+      color: #4b25c5;
+      margin: 0 0 12px;
+      font-size: 24px;
+    }
 
-/* HOME */
+    .promotion-card p {
+      margin: 0;
+      font-size: 17px;
+      color: #555;
+      line-height: 1.5;
+    }
 
-.logo {
-    font-size: 42px;
-    font-weight: bold;
-    margin-top: 50px;
-    margin-bottom: 15px;
-}
-
-.welcome {
-    font-size: 22px;
-    margin-bottom: 45px;
-}
-
-.question {
-    font-size: 20px;
-    margin-bottom: 25px;
-}
-
-.home-button {
-    width: 100%;
-    padding: 18px;
-    margin-bottom: 18px;
-    border: none;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.18);
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-}
-
-.home-button:hover {
-    background: rgba(255,255,255,0.28);
-}
-
-/* PLATFORM PAGE */
-
-.page-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 15px;
-}
-
-.page-subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.platform-card {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 20px;
-    margin-bottom: 18px;
-    border-radius: 20px;
-    background: rgba(255,255,255,0.16);
-    border: 1px solid rgba(255,255,255,0.25);
-    color: white;
-    cursor: pointer;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.platform-card i {
-    width: 45px;
-    font-size: 35px;
-    text-align: center;
-}
-
-.platform-name {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* BRAND PAGE */
-
-.brand-title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.brand-subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.brand-card {
-    background: rgba(255,255,255,0.16);
-    border: 1px solid rgba(255,255,255,0.28);
-    border-radius: 20px;
-    padding: 22px;
-    margin-bottom: 18px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* BRAND IMAGE */
-
-.brand-image {
-    width: 120px;
-    height: 120px;
-    margin: 0 auto 15px;
-    display: block;
-    object-fit: contain;
-    border-radius: 20px;
-    background: white;
-    padding: 10px;
-    box-sizing: border-box;
-}
-
-/* BRAND NAME */
-
-.brand-name {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* BUTTONS */
-
-.next-button {
-    width: 100%;
-    padding: 17px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 18px;
-    background: white;
-    color: #4f46e5;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.brand-back-button,
-.back-button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 15px;
-    border: none;
-    border-radius: 18px;
-    background: rgba(255,255,255,0.18);
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
-}
-
-</style>
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      background: #4b25c5;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- HOME PAGE -->
+  <div class="header">
+    <h1>BRAND PROMOTION</h1>
+  </div>
 
-<div id="homePage" class="page active">
+  <div class="container">
 
-    <div class="container">
+    <div class="promotion-card"
+         onclick="window.location.href='logo.html'">
 
-        <div class="logo">
-            PromoHub
-        </div>
+      <h2>📢 Logo Promotion</h2>
 
-        <div class="welcome">
-            Welcome to Our Promotion Platform
-        </div>
+      <p>
+        Logo Promotion ke liye brands aur work details yahan dekhein.
+      </p>
 
-        <div class="question">
-            Aap kya promote karna chahte hain?
-        </div>
-
-        <button class="home-button" onclick="showPlatformPage()">
-            Story Promotion
-        </button>
-
-        <button class="home-button" onclick="showPlatformPage()">
-            Logo Promotion
-        </button>
+      <div class="button">
+        View Brands
+      </div>
 
     </div>
 
-</div>
-
-
-<!-- PLATFORM PAGE -->
-
-<div id="platformPage" class="page">
-
-    <div class="container">
-
-        <div class="page-title">
-            Choose Platform
-        </div>
-
-        <div class="page-subtitle">
-            Aap kis platform par promotion karna chahte hain?
-        </div>
-
-
-        <div class="platform-card"
-             onclick="selectPlatform('Instagram')">
-
-            <i class="fa-brands fa-instagram"></i>
-
-            <div class="platform-name">
-                Instagram
-            </div>
-
-        </div>
-
-
-        <div class="platform-card"
-             onclick="selectPlatform('YouTube')">
-
-            <i class="fa-brands fa-youtube"></i>
-
-            <div class="platform-name">
-                YouTube
-            </div>
-
-        </div>
-
-
-        <div class="platform-card"
-             onclick="selectPlatform('Facebook')">
-
-            <i class="fa-brands fa-facebook"></i>
-
-            <div class="platform-name">
-                Facebook
-            </div>
-
-        </div>
-
-
-        <button class="back-button"
-                onclick="goHome()">
-
-            ← Back
-
-        </button>
-
-    </div>
-
-</div>
-
-
-<!-- BRAND PAGE -->
-
-<div id="brandPage" class="page">
-
-    <div class="container">
-
-        <div class="brand-title"
-             id="brandPageTitle">
-
-            Instagram Brands
-
-        </div>
-
-        <div class="brand-subtitle">
-            Select a brand for promotion
-        </div>
-
-
-        <!-- BRAND 1 -->
-
-        <div class="brand-card"
-
-            <img src="brand1.jpg"
-                 class="brand-image"
-                 alt="Brand One">
-
-            <div class="brand-name">
-                Brand One
-            </div>
-
-        </div>
-
-
-        <!-- BRAND 2 -->
-
-        <div class="brand-card">
-
-            <img src="brand2.jpg"
-                 class="brand-image"
-                 alt="Brand Two">
-
-            <div class="brand-name">
-                Brand Two
-            </div>
-
-        </div>
-
-
-        <!-- BRAND 3 -->
-
-        <div class="brand-card">
-
-            <img src="brand3.jpg"
-                 class="brand-image"
-                 alt="Brand Three">
-
-            <div class="brand-name">
-                Brand Three
-            </div>
-
-        </div>
-
-
-        <!-- BRAND 4 -->
-
-        <div class="brand-card">
-
-            <img src="brand4.jpg"
-                 class="brand-image"
-                 alt="Brand Four">
-
-            <div class="brand-name">
-                Brand Four
-            </div>
-
-        </div>
-
-
-        <button class="next-button"
-                onclick="nextPage()">
-
-            Next →
-
-        </button>
-
-
-        <button class="brand-back-button"
-                onclick="backToPlatform()">
-
-            ← Back
-
-        </button>
-
-    </div>
-
-</div>
-
-
-<script>
-
-function showPlatformPage() {
-
-    document.getElementById("homePage")
-        .classList.remove("active");
-
-    document.getElementById("brandPage")
-        .classList.remove("active");
-
-    document.getElementById("platformPage")
-        .classList.add("active");
-}
-
-
-function goHome() {
-
-    document.getElementById("platformPage")
-        .classList.remove("active");
-
-    document.getElementById("brandPage")
-        .classList.remove("active");
-
-    document.getElementById("homePage")
-        .classList.add("active");
-}
-
-
-function selectPlatform(platform) {
-
-    document.getElementById("platformPage")
-        .classList.remove("active");
-
-    document.getElementById("brandPage")
-        .classList.add("active");
-
-    document.getElementById("brandPageTitle")
-        .innerText = platform + " Brands";
-}
-
-
-function backToPlatform() {
-
-    document.getElementById("brandPage")
-        .classList.remove("active");
-
-    document.getElementById("platformPage")
-        .classList.add("active");
-}
-
-
-function nextPage() {
-
-    alert("Next page coming soon!");
-
-}
-
-</script>
+  </div>
 
 </body>
 </html>
